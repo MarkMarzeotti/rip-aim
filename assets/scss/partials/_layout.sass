@@ -1,0 +1,80 @@
+////////////
+// LAYOUT //
+////////////
+
+.layout
+  +position(fixed, 0 0 0 0)
+  background-color: $color-tan
+  z-index: 0
+
+  .border-top
+    +position(absolute, 0 0 null 0)
+    background-image: url(../img/ui/border-top.png)
+    background-position: top
+    background-size: contain
+    height: 40px
+    z-index: 4
+
+  .border-right
+    +position(absolute, 0 0 0 null)
+    background-image: url(../img/ui/border-right.png)
+    background-position: right
+    background-size: contain
+    width: 5px
+    z-index: 6
+
+  .border-bottom
+    +position(absolute, null 0 0 0)
+    background-image: url(../img/ui/border-bottom.png)
+    background-position: bottom
+    background-size: contain
+    height: 30px
+    z-index: 4
+
+  .border-left
+    +position(absolute, 0 null 0 0)
+    background-image: url(../img/ui/border-left.png)
+    background-position: left
+    background-size: contain
+    width: 5px
+    z-index: 6
+
+  .corner-top-left
+    +position(absolute, 0 null null 0)
+    background-image: url(../img/ui/corner-top-left.png)
+    background-position: top left
+    background-repeat: no-repeat
+    background-size: contain
+    height: 40px
+    width: 100px
+    z-index: 10
+
+  .corner-top-right
+    +position(absolute, 0 0 null null)
+    background-image: url(../img/ui/corner-top-right.png)
+    background-position: top right
+    background-repeat: no-repeat
+    background-size: contain
+    height: 40px
+    width: 100px
+    z-index: 10
+
+  .corner-bottom-left
+    +position(absolute, null null 0 0)
+    background-image: url(../img/ui/corner-bottom-left.png)
+    background-position: bottom left
+    background-repeat: no-repeat
+    background-size: contain
+    height: 30px
+    width: 100px
+    z-index: 10
+
+  .corner-bottom-right
+    +position(absolute, null 0 0 null)
+    background-image: url(../img/ui/corner-bottom-right.png)
+    background-position: bottom right
+    background-repeat: no-repeat
+    background-size: contain
+    height: 30px
+    width: 100px
+    z-index: 10
