@@ -1,6 +1,6 @@
 <?php
-    // $pageLink = 'https://ripaim.markmarzeotti.com/';
-    $pageLink = 'http://localhost:8888/personal/rip-aim/';
+    $pageLink = 'https://ripaim.markmarzeotti.com/';
+    // $pageLink = 'http://localhost:8888/personal/rip-aim/';
     $screenname = htmlspecialchars($_GET["screenname"]); // between 3 and 16 chars
     if ($screenname) {
         $title = $screenname . ' Shared Their Image';

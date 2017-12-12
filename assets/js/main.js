@@ -1,5 +1,5 @@
-// var pageLink = 'https://ripaim.markmarzeotti.com/';
-var pageLink = 'http://localhost:8888/personal/rip-aim/';
+var pageLink = 'https://ripaim.markmarzeotti.com/';
+// var pageLink = 'http://localhost:8888/personal/rip-aim/';
 
 var a2a_config = a2a_config || {};
 a2a_config.linkurl = pageLink + "assets/img/generator-bg.png";
