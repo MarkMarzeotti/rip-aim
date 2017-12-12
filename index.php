@@ -1,17 +1,18 @@
 <?php
-    $pageLink = 'https://sig.markmarzeotti.com/';
-    // $pageLink = 'http://localhost:8888/personal/sharable-image-generator/';
+    $pageLink = 'https://ripaim.markmarzeotti.com/';
+    // $pageLink = 'http://localhost:8888/personal/rip-aim/';
     $screenname = htmlspecialchars($_GET["screenname"]); // between 3 and 16 chars
     if ($screenname) {
         $title = $screenname . ' Shared Their Image';
         $image = $pageLink . 'generated/' . $screenname . '.png';
         $link = $pageLink . '?screenname=' . $screenname;
     } else {
-        $title = 'Share your image';
+        $title = 'AIM Lives On';
         $image = $pageLink . 'assets/img/generator-bg.png';
         $link = $pageLink;
     }
 ?>
+
 <!doctype html>
 <html prefix="og: http://ogp.me/ns#" class="no-js" lang="">
     <head>
@@ -63,43 +64,50 @@
             <div class="corner-top-right"></div>
             <div class="corner-bottom-left"></div>
             <div class="corner-bottom-right"></div>
+            <div class="page-title">
+                <?php echo $title; ?>
+            </div>
         </div>
 
-        <section class="aol vertical-middle-wrapper">
-            <div class="vertical-middle">
-                <div class="row">
-                    <div class="column text-center">
-                        <h1>Sharable Image Generator</h1>
-                        <canvas id="canvas" width="1200" height="630"></canvas>
-                        <?php if ($screenname) { ?>
-                        <div class="created-image">
-                            <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-                        </div>
-                        <a href="<?php echo $pageLink; ?>">Create Yours!</a>
-                        <?php } else { ?>
-                        <div id="gen-bucket"></div>
-                        <div class="create-image">
-                            <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-                            <form class="image-generator" id="bury" action="<?php echo $pageLink; ?>">
-                                <input type="text" name="screenname" id="screenname" value="" maxlength="16">
-                                <input type="submit" value="Create It">
-                            </form>
-                        </div>
-                        <?php } ?>
-                        <div class="share">
+        <section class="aol-container">
+            <div class="vertical-middle-wrapper">
+                <div class="vertical-middle">
 
-                            <!-- AddToAny BEGIN -->
-                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="<?php echo $link; ?>">
-                            <a class="a2a_button_facebook"></a>
-                            <a class="a2a_button_twitter"></a>
-                            <a class="a2a_button_google_plus"></a>
-                            <a class="a2a_button_pinterest"></a>
-                            <a class="a2a_button_linkedin"></a>
+                    <div class="row">
+                        <div class="aol column text-center">
+                            <h1>AIM MAY BE GONE, BUT YOUR SCREENNAME CAN LIVE ON FOREVER.</h1>
+                            <canvas id="canvas" width="1200" height="630"></canvas>
+                            <?php if ($screenname) { ?>
+                            <div class="created-image">
+                                <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
                             </div>
-                            <script async src="https://static.addtoany.com/menu/page.js"></script>
-                            <!-- AddToAny END -->
+                            <a href="<?php echo $pageLink; ?>">Create Yours!</a>
+                            <?php } else { ?>
+                            <div class="gen-bucket"></div>
+                            <div class="create-image">
+                                <img src="./assets/img/aol-instant-messenger.png" alt="RIP AIM" />
+                                <hr />
+                                <h2>Immortalize your ScreenName here:</h2>
+                                <form class="image-generator" id="bury" action="<?php echo $pageLink; ?>">
+                                    <input type="text" name="screenname" id="screenname" value="" maxlength="16">
+                                    <input type="submit" value="Sign On Forever">
+                                </form>
+                            </div>
+                            <?php } ?>
+                            <div class="share">
+
+                                <!-- AddToAny BEGIN -->
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="<?php echo $link; ?>">
+                                    <a class="a2a_button_facebook"></a>
+                                    <a class="a2a_button_twitter"></a>
+                                    <a class="download"></a>
+                                </div>
+                                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                                <!-- AddToAny END -->
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

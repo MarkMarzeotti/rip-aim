@@ -3,11 +3,13 @@
 @import "bourbon";
 @import "neat";
 
+@import "partials/fonts";
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/grid-settings";
 
 @import "partials/global";
+@import "partials/typography";
 @import "partials/layout";
 @import "partials/header";
 @import "partials/footer";

@@ -7,46 +7,114 @@
   float: left
   width: 100%
 
+.aol-container
+  +position(fixed, 40px 5px 30px 5px)
+  overflow: scroll
+
+.aol
+  box-sizing: border-box
+  display: block
+  max-width: 860px
+  margin: auto
+  padding: 60px 30px 90px
+  position: relative
+  width: 100%
+  z-index: 100
+
 canvas
   display: none
+  letter-spacing: -16px
   margin: auto
   max-width: 600px
 
-#gen-bucket
-  margin: 0 auto
+.gen-bucket
+  margin: 0 auto 60px
   max-width: 600px
 
   img
     max-width: 100%
 
 
-.create-image img,
-.created-image img
-  max-width: 600px
-
 .create-image
   margin: 0 auto
   position: relative
-  max-width: 600px
+
+  img
+    margin-bottom: 34px
+    max-width: 560px
+
+  hr
+    border: 0
+    border-bottom: 1px solid $color-tan-darker
+    margin: 0 auto 20px
+    width: 500px
 
   input[name=screenname]
-    background-color: transparent
-    border: 0
-    color: #fff
-    font-family: 'Calibri'
-    font-size: 70px
+    background-color: $color-white
+    border: 1px solid $color-grey
+    color: #000
+    display: block
+    font-family: $font-apple
+    font-size: 14px
+    letter-spacing: -3px
+    margin: 0 auto 26px
+    max-width: 280px
     outline: none
-    text-align: center
+    padding: 7px 7px 6px
     width: 100%
 
-    position: absolute
-    top: 60px
-    left: 0
-    right: 0
+    &:focus
+      border: 1px solid $color-blue-light
 
+  input[type=submit]
+    appearance: none
+    background-color: $color-tan-dark
+    border: 0
+    border-radius: 0
+    box-shadow: 0px 1px 3px 1px rgba($color-shadow, .6)
+    color: $color-blue-dark
+    display: block
+    font-family: $font-apple
+    font-size: 14px
+    font-style: italic
+    letter-spacing: -4px
+    margin: auto
+    outline: none
+    padding: 14px 18px
+    text-shadow: 0px 2px 0px rgba($color-white, 0.8)
+    width: auto
+
+    &:hover
+      box-shadow: 0px 1px 2px 1px rgba($color-shadow, .4)
+
+
+.share
+  display: none
+  position: relative
+  z-index: 100
 
 .a2a_kit
   display: inline-block
+
+  a
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    height: 49px
+    margin: 0 15px
+    width: 49px
+
+    span
+      display: none
+
+  .a2a_button_facebook
+    background-image: url(../img/share/facebook.png)
+
+  .a2a_button_twitter
+    background-image: url(../img/share/twitter.png)
+
+  .download
+    background-image: url(../img/share/download.png)
 
 // .created-image
 //   display: none
