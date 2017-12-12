@@ -5,5 +5,3 @@ assets/design
 node_modules/
 
 .DS_Store*
-
-config.php
