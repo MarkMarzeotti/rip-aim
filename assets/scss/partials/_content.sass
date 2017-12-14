@@ -14,9 +14,10 @@
 .aol
   box-sizing: border-box
   display: block
-  max-width: 870px
+  max-width: 1400px
   margin: auto
-  padding: 60px 30px 90px
+  overflow: auto
+  padding: 40px 30px 120px
   position: relative
   width: 100%
   z-index: 100
@@ -28,6 +29,7 @@ canvas
   max-width: 600px
 
 .gen-bucket
+  display: none
   margin: 0 auto 60px
   max-width: 600px
 
@@ -37,17 +39,17 @@ canvas
 
 .create-image
   margin: 0 auto
+  max-width: 100%
   position: relative
 
   img
-    margin-bottom: 34px
-    max-width: 560px
+    max-width: 100%
 
   hr
     border: 0
     border-bottom: 1px solid $color-tan-darker
     margin: 0 auto 20px
-    width: 500px
+    max-width: 500px
 
   input[name=screenname]
     background-color: $color-white
@@ -73,6 +75,7 @@ canvas
     border-radius: 0
     box-shadow: 0px 1px 3px 1px rgba($color-shadow, .6)
     color: $color-blue-dark
+    cursor: pointer
     display: block
     font-family: $font-apple
     font-size: 14px
@@ -91,6 +94,7 @@ canvas
 .share
   display: none
   position: relative
+  text-align: center
   z-index: 100
 
 .a2a_kit
@@ -104,8 +108,12 @@ canvas
     margin: 0 15px
     width: 49px
 
+    *
+      cursor: pointer
+
     span
       display: none
+
 
   .a2a_button_facebook
     background-image: url(../img/share/facebook.png)
@@ -113,8 +121,20 @@ canvas
   .a2a_button_twitter
     background-image: url(../img/share/twitter.png)
 
+  .a2a_button_linkedin
+    background-image: url(../img/share/linkedin.png)
+
   .download
     background-image: url(../img/share/download.png)
 
-// .created-image
-//   display: none
+  @media screen and (max-width: 900px)
+
+    a
+      height: 35px
+      width: 35px
+
+
+.digo
+  +position(absolute, null 0 0 0)
+  padding: 0 30px
+  text-align: center
